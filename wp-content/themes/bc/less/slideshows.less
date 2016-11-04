@@ -1,0 +1,32 @@
+/*================================================
+  bc.slideshow global styles (applies to all sliders)
+=================================================*/
+.bc-slideshow{
+  button.slick-prev{
+    left: 40px;
+    z-index: 1;
+    &::before{
+      font-family: 'FontAwesome';
+      content: '\f053';
+      font-size: 40px;
+    }
+  }
+  button.slick-next{
+    right: 40px;
+    z-index: 1;
+    &::before{
+      font-family: 'FontAwesome';
+      content: '\f054';
+      font-size: 40px;
+    }
+  }
+  .slick-slide{
+    padding: 40px 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  .slick-dots{
+    bottom: 10px;
+  }
+}

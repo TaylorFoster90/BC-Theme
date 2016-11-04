@@ -1,0 +1,839 @@
+/*
+ Most of the shortcode styles are in this folder and can be over written
+ to match the look of the website that is being developed. This file includes
+ styles for:
+  > Section Video [section_video]
+  > Page Banner [page_banner]
+  > Page Banner Large [page_banner_large]
+  > Page Banner Flex [page_banner_flex]
+  > Single Location Address [single_location_address location="1"]
+  > Sidebar Form Schema [text-blocks id="sidebar-form-schema"]
+  > Sidebar Schema [address_loop class="sidebar-schema"]
+  > Link Group [child_page_link_group parent_page="284"]
+  > Child Page List [child_page_list parent_page="284"]
+  > Bottom CTA [text-blocks id="bottom-cta"]
+  > Mobile Top CTA [text-blocks id="mobile-top-cta"]
+  > Mobile Conversion[mobile_location_conversion]
+  > Accordion [accordion] [accordion_item]
+  > Tabs [bc_tabs] [bc_tab_item]
+  > Breadcrumbs [breadcrumbs]
+  > Img Flex [img_flex]
+  > Team Block [team_block]
+  > Schema [schema]
+  > Affix Nav
+  > BC HR
+  > Icon List
+  > BC Card
+*/
+
+/*======================
+  Section Video
+=======================*/
+.section-video-bg{
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.video-bg{
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  /* The following will size the video to fit the full container. Not necessary, just nice.*/
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+/*======================
+  Page Banner
+=======================*/
+.page-banner{
+  padding: 20px 0;
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: @color-1;
+  h1{
+    color: #FFF;
+  }
+}
+/*======================
+  Page Banner Large
+=======================*/
+.page-banner-large{
+  padding: 10em 0;
+  min-height: 300px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+/*======================
+  Page Banner Flex
+=======================*/
+.page-banner-flex{
+  min-height: 300px;
+  width: 100%;
+  height: ~'calc(100vh - 25px - 90px)';
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .bg-gradient-top-right(#FFF, #36F, 0%, 75%);
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  align-content: center;
+  text-align: center;
+  .content{
+
+  }
+  .bottom-callout{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,.8);
+    *{
+      color: #fff;
+    }
+  }
+  @media(max-width: 767px){
+    height: calc(~"100vh - 1px - "@m-height);
+  }
+}
+/*=========================
+  Single Location Address
+==========================*/
+.single-location-address{
+  i{
+
+  }
+  .c-name{
+    i{
+      top: 0.35em;
+      font-size: 16px;
+    }
+    span{
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+  .addr{
+    i{
+      font-size: 16px;
+    }
+    a{
+
+    }
+  }
+  .phone{
+    i{
+      font-size: 16px;
+    }
+    a{
+
+    }
+  }
+  .email{
+    i{
+      font-size: 13px;
+      left: -2.4em;
+    }
+    a{
+
+    }
+  }
+  li:not(:last-of-type){
+    margin-bottom: 5px;
+  }
+  &not(:last-of-type){
+    margin-bottom: 20px;
+  }
+}
+/*======================
+  Address Loop
+=======================*/
+.address-loop{
+  i{
+
+  }
+  .c-name{
+    a{
+      font-weight: 600;
+    }
+  }
+  .addr{
+    i{
+      font-size: 16px;
+    }
+    a{
+
+    }
+  }
+  .phone{
+    i{
+      font-size: 16px;
+    }
+    a{
+
+    }
+  }
+  .email{
+    i{
+      font-size: 13px;
+      left: -2.4em;
+    }
+    a{
+
+    }
+  }
+  li:not(:last-of-type){
+    margin-bottom: 5px;
+  }
+  &not(:last-of-type){
+    margin-bottom: 20px;
+  }
+}
+/*======================
+  Sidebar Form Schema
+=======================*/
+.sidebar-form-schema{
+  .schema-list{
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 15px;
+    border-bottom: 1px solid #EEE;
+    border-top: 1px solid #EEE;
+    i{
+    }
+    a{
+      color: black;
+      &:hover{
+
+      }
+    }
+  }
+  .form{
+    .wpcf7{
+      textarea{
+        height: 75px;
+      }
+      input[type="submit"]{
+        background-color: green;
+        width: 100%;
+        color: #FFF;
+        &:hover{
+          background-color: darken(green, 15%);
+        }
+        @media(max-width: 767px){
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/*======================
+  Sidebar Schema
+=======================*/
+.sidebar-schema{
+  i{
+    color: #ABABAB;
+  }
+  span[itemprop="name"]{
+    font-weight: 700;
+    font-size: 18px;
+    a{
+      color: black;
+      &:hover{
+        color: grey;
+      }
+    }
+  }
+  .address{
+    a{
+      color: black;
+      &:hover{
+        color: grey;
+      }
+    }
+  }
+  .schema-links{
+    a{
+      &:first-of-type{
+
+      }
+      &:last-of-type{
+
+      }
+    }
+  }
+  &:not(:last-of-type){
+    margin-bottom: 1em;
+  }
+}
+
+/*======================
+  Link Group
+=======================*/
+.link-group{
+  a{
+    display: block;
+    background-color: #F7F6F6;
+    color: #5E5E5E;
+    padding: 10px 0 10px 30px;
+    border: 1px solid #CFCFCF;
+    border-bottom: none;
+    position: relative;
+    &:hover{
+      color:  #5E5E5E;
+      background-color: darken(#F7F6F6,10%);
+    }
+    &:last-of-type{
+      border-bottom: 1px solid #CFCFCF;
+    }
+    &::before{
+      content: '\f0da';
+      font-family:'FontAwesome';
+      position: absolute;
+      left: 20px;
+      color: #D1D0D0;
+    }
+  }
+  br{
+    display: none!important;
+  }
+}
+/*======================
+  Child Page List
+=======================*/
+.child-page-list{
+  p{
+    font-size: 22px;
+    a{
+      color: @color-1;
+      &:hover{
+        color: @color-2;
+      }
+    }
+  }
+}
+/*======================
+  Bottom CTA
+=======================*/
+.bottom-cta{
+  background: #EEE;
+  .tel{
+    a{
+      font-size: 45px;
+      font-weight: 700;
+    }
+  }
+  a.btn{
+    background-color: transparent;
+    border: 2px solid @color-2;
+    color: #000;
+    &:hover{
+      border-color: transparent;
+      color: #000;;
+      background-color: @color-2;
+    }
+  }
+}
+/*======================
+  Mobile Top Cta
+=======================*/
+.mobile-top-cta{
+  background-color: black;
+  text-align: center;
+  padding: 15px 0;
+  .col-inner{
+    width: 50%;
+    display: inline-block;
+    &:first-of-type{
+      padding-right: 5px;
+    }
+    &:last-of-type{
+      padding-left: 5px;
+    }
+  }
+  p{
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  a.btn{
+    background-color: #CCC;
+    color: #FFF;
+    border: 2px solid transparent;
+    font-weight: 900;
+    &:hover{
+      border-color: #FFF;
+      color: #FFF;
+      background-color: transparent;
+    }
+  }
+  @media(min-width: 768px){
+    display: none;
+  }
+}
+/*======================
+  Mobile Conversion
+=======================*/
+.location-block-mobile{
+  figure{
+    margin: 0;
+    padding: 0 10px 0 0;
+    display: block;
+    width: 125px;
+    float: left;
+  }
+  .name{
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.25;
+    a{
+      color: #333;
+      &:hover{
+        color: darken(#333, 10%);
+      }
+    }
+  }
+  .address{
+    font-size: 13px;
+    font-weight: 700;
+    a{
+      color: #333;
+      &:hover{
+        color: lighten(#333, 15%);
+      }
+    }
+  }
+  .schema-contact {
+    overflow: hidden;
+    text-align: right;
+    margin-left: 127px;
+    font-size: 16px;
+    padding: 0;
+    font-weight: bold;
+    a.btn{
+      padding: 18px 10%;
+      text-align: center;
+      white-space: nowrap;
+      &:first-of-type {
+        background-color: @color-1;
+        color: #FFF;
+        &:hover{
+          background-color: darken(@color-1, 10%);
+        }
+      }
+      &:last-of-type{
+        margin-top: 9px;
+        background-color: #333;
+        color: #FFF;
+        &:hover{
+          background-color: lighten(#333, 10%);
+        }
+      }
+    }
+  }
+  &:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  &:not(:last-child){
+    margin-bottom: 3em;
+  }
+}
+/*======================
+  Accordion
+=======================*/
+div.accordion{
+  .accordion-block{
+    &:not(:last-of-type){
+      margin-bottom: 10px;
+    }
+    .accordion-header{
+      border: 1px solid black;
+      a{
+        background-color: @color-1;
+        display: block;
+        color: #FFF;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 10px;
+        span{
+          font-size: 20px;
+          color: @color-2;
+          display: inline-block;
+          transition: all .5s;
+          margin-right: 5px;
+        }
+        &:hover{
+          text-decoration: none;
+          background-color: darken(@color-1, 10%);
+        }
+        &:active{
+          text-decoration: none;
+        }
+        &:focus{
+          text-decoration: none;
+        }
+      }
+    }
+    .accordion-content{
+      font-size: 16px;
+      padding: 20px;
+      border: 1px solid black;
+      border-top: none;
+      overflow: hidden;
+      background-color: #EEE;
+      color: #000;
+      strong{
+        color: #000;
+      }
+      p{
+        margin: 0;
+        margin-bottom: 7px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+    &:last-of-type{
+      .accordion-header{
+        border-bottom: 1px solid black;
+      }
+      .accordion-content{
+        border-top: none;
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+div.accordion{
+  .accordion-block.active-accordion{
+    .accordion-header{
+      a{
+        background-color: darken(@color-1, 10%);
+        span{
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+/*======================
+  Tabs
+=======================*/
+.bc-tabs{
+  text-align: center;
+  position: relative;
+  .bc-tab{
+    width: 33.06%;
+    background-color: #EEE;
+    color: red;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    transition: color .5s, background-color .5s;
+    border: 1px solid #EDD;
+    &:hover{
+      background-color: darken(#EEE, 10%);
+      color:  yellow;
+    }
+    @media(max-width: 991px){
+      width: 100%;
+      display: block;
+    }
+  }
+  .tab-active{
+    background-color: darken(#EEE, 10%);
+    color:  yellow;
+  }
+}
+.bc-tab-panels{
+  margin: 0 auto;
+  .bc-panel{
+    padding: 20px;
+    border: 1px solid #EEE;
+  }
+  .tab.panel-active{
+
+  }
+}
+/*======================
+  Breadcrumbs
+=======================*/
+.breadcrumb-wrap{
+  background: black;
+  font-size: 13px;
+  padding: 5px 0;
+  .spacer{
+    color: #FFF;
+    font-size: 12px;
+  }
+  .current{
+    color: orange;
+  }
+  a{
+    color: #FFF;
+    &:hover{
+      color: orange;
+    }
+  }
+  @media(max-width: 767px){
+    text-align: center;
+    a{
+      font-size: 12px;
+    }
+    .current{
+      font-size: 12px;
+    }
+  }
+}
+/*======================
+  Affix Page Nav
+=======================*/
+.affix-page-nav{
+  background-color: @color-2;
+  width: 100%;
+  top: 50px;
+  z-index: 99;
+  a{
+    display: inline-block;
+    border-right: 1px solid black;
+    color: #FFF;
+    padding: 10px 15px;
+    &:hover{
+      background-color: rgba(255,255,255,.5);
+      color: #FFF;
+    }
+    &:first-of-type{
+      border-left: 1px solid black;
+    }
+  }
+  @media(max-width: 767px){
+    display: none;
+  }
+}
+/*======================
+  BC HR
+=======================*/
+.bc-hr{
+  border-top: 1px solid #BBB;
+  &.blank{
+    border: none;
+    border-top: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &.double-line{
+    border-bottom: 1px solid #BBB;
+    height: 2px;
+  }
+  &.gradient{
+    border: 0;
+    height: 1px;
+    background: #333;
+     background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  }
+}
+/*======================
+  Icon List
+=======================*/
+.fa-ul.icon-list{
+  li{
+    line-height: 1.2;
+    &:not(last-of-type){
+      margin-bottom: 10px;
+    }
+  }
+}
+/*======================
+  Review Links
+=======================*/
+.review-link-grid{
+  .block-grid-item{
+    opacity: 0;
+    -webkit-transform: rotate(-20deg);
+    transition: transform 1s, opacity 1s;
+  }
+  a{
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    img{
+      transition: all .5s;
+      border-radius: 50%;
+    }
+    &:hover{
+      img{
+        transform: rotate(-8deg);
+      }
+    }
+  }
+}
+/*======================
+  Team Block
+=======================*/
+.team-block{
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  figure{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    img{
+      transition: transform .5s;
+    }
+    .overlay{
+      position: absolute;
+      background-color: rgba(0,0,0,.3);
+      top:0; left:0;
+      height: 100%;
+      width: 100%;
+      color: #FFF;
+      transition: all .5s;
+      padding: 40% 5% 0;
+      opacity: 0;
+      a{
+        color: #FFF;
+        font-size: 20px;
+        line-height: 0;
+        transform: rotate(180deg);
+        i{
+          -webkit-transform: rotate(90deg);
+          transition: transform .5s;
+        }
+        &:hover{
+          color: @color-2;
+        }
+        &:not(:last-of-type){
+          margin-right: 8%;
+        }
+      }
+    }
+    &:hover{
+      .overlay{
+        opacity: 1;
+        i{
+          -webkit-transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}
+/*======================
+  Schema
+=======================*/
+.schema-list.fa-ul{
+  li{
+    line-height: 1.5;
+  }
+  .fa-li{
+    top: 4.5px;
+  }
+}
+.schema-list{
+
+}
+/*======================
+  Img Overlay
+=======================*/
+.bc-img-overlay{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  img{
+    transition: all .5s;
+  }
+  .overlay{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 5%;
+    opacity: 0;
+    text-align: center;
+    transition: all .5s;
+  }
+  &:hover{
+    .overlay{
+      opacity: 1;
+    }
+    img{
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+    }
+  }
+}
+/*======================
+  BC Card
+=======================*/
+.bc-card{
+  display: inline-block;
+  .figure{
+    display: inline-block;
+  }
+  .title{
+    margin-bottom: 5px;
+    a{
+      color: #000;
+    }
+  }
+  .content{
+    text-align: center;
+    border: 1px solid #EEE;
+    border-top: none;
+    padding: 15px;
+    margin-top: -6px;
+    .btn{
+      margin-top: 10px;
+    }
+  }
+}
+/*======================
+  Section Thank You
+=======================*/
+.section.section-thank-you{
+  padding: 60px 0 120px 0;
+  @media(max-width: 991px){
+    padding: 40px 0;
+  }
+}
+/*======================
+  Img Flex
+=======================*/
+.img-flex{
+  background-position: center center;
+  background-size: cover;
+}

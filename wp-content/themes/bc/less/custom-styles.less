@@ -1,0 +1,158 @@
+/*======================
+  Variables & Classes
+=======================*/
+@white: #FFFFFF;
+@color-1:  #1d4f83;
+@color-2: #d74d11;
+a{
+  color: @color-2;
+  &:hover{
+    color: darken(@color-2, 15%);
+  }
+}
+p{
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+.text-color-1{
+  color: @color-1;
+}
+.text-color-2{
+  color: @color-2;
+}
+.white-line{
+  background-color: #FFF;
+  height: 3px;
+  width: 60px;
+}
+.color-1-line{
+  background-color: @color-1;
+  height: 3px;
+  width: 60px;
+}
+.color-2-line{
+  background-color: @color-2;
+  height: 3px;
+  width: 60px;
+}
+.section.taylor-parallax{
+  background-position: center 50%;
+  transition: background-position .3s;
+}
+/*======================
+  Contact Form 7
+=======================*/
+input.wpcf7-submit{
+  background-color: @color-1;
+  width: 40%;
+  color: #FFF;
+  &:hover{
+    background-color: darken(@color-1, 15%);
+  }
+  @media(max-width: 767px){
+    width: 100%;
+  }
+}
+.contact-form{
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+  &.form-icons{
+
+  }
+  .form-header{
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+  }
+  .form-body{
+    padding: 25px 30px 25px;
+    p{
+      margin-bottom: 0;
+    }
+    p:not(:last-of-type){
+      padding-bottom: 10px;
+    }
+  }
+  .wpcf7-form-control.wpcf7-radio, .wpcf7-form-control.wpcf7-checkbox{
+    input{
+      margin-right: 7px;
+    }
+    .wpcf7-list-item{
+      font-size: 13px;
+    }
+    .wpcf7-list-item:not(:last-of-type){
+      margin-right: 10px;
+    }
+    @media(max-width: 767px){
+      .wpcf7-list-item:not(:last-of-type){
+        margin-right: 0;
+      }
+      .wpcf7-list-item{
+
+        display: block;
+        padding-bottom: 3px;
+      }
+    }
+  }
+  .wpcf7-checkbox{
+    .wpcf7-list-item{
+      display: inline-block;
+      width: 100%;
+      @media(max-width: 767px){
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .form-footer{
+    border-top: 1px solid rgba(0,0,0,.1);
+    text-align: right;
+    background: #EFEFEF;
+    padding: 20px 30px;
+  }
+  .wpcf7-form-control-wrap{
+    display: block;
+  }
+  span.wpcf7-not-valid-tip {
+    color: #f00;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    bottom: -9px;
+    width: 100%;
+  }
+  label{
+    font-size: 15px;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+  input:not([type="submit"]), textarea{
+    transition: border-color .2s;
+    border-width: 2px;
+    border-style: solid;
+    &:hover, &:active, &:focus{
+      border-color: @color-1;
+    }
+  }
+}
+.sidebar-contact-form{
+  h3{
+    background-color: @color-1;
+    color: #FFF;
+    padding: 15px;
+  }
+  .form-body{
+    padding: 15px;
+    background-color: #EEE;
+    textarea{
+      height: 100px;
+    }
+    .ajax-loader{
+      display: none;
+    }
+    label{
+      font-size: 14px;
+    }
+    p{
+      margin-bottom: 2px;
+    }
+  }
+
+}
